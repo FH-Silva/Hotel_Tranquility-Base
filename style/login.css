@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(156, 156, 156);
+}
+
+main h1{
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+.formulario{
+    background-color: red;
+    display: flex;
+    
+}
+main form{
+    background-color: rgb(18, 66, 50);
+    color: white;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    font-size: 20px;
+}
+.button{
+    width: 50%;
+    margin: 0 auto;
+}
+#login, #name, #pass{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer{
+    background-color: brown;
+}
