@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
     <meta charset="UTF-8">
@@ -8,11 +9,34 @@
     <meta name="revised" content="Saturday, April 6th, 2024, 5:15 am">
     <meta name="language" content="Portuguese">
 
-    <title>Tranquility Base Hotel & Casino</title>
+    <link rel="stylesheet" href="style/login.css">
+    <title>Login - Tranquility Base</title>
 </head>
+
 <body>
-    <h1>Tranquility Base Hotel & Casino</h1>
-    
+    <h1>Bem-vindo! Insira o usuário e senha para iniciarmos</h1>
+    <main>
+        <form id="enviar">
+            <div class="grupoForm">
+                <label for="name">Nome:</label> <br>
+                <input type="text" id="name" name="name" placeholder="Usuário" required>
+            </div> <br>
+            <div class="grupoForm">
+                <label for="pass">Senha:</label> <br>
+                <input type="password" id="pass" name="pass" placeholder="Senha" required>
+            </div> <br>
+            <div class="button"><input type="submit" name="login" id="login" value="Logar"></div>
+        </form>
+    </main>
+
+    <footer>
+        <dl>
+            <dt><strong>Endereço:</strong></dt>
+            <dd>Rua Tranquility Base, Bairro Lua, Estado Sistema Solar</dd>
+        </dl>
+        <P><strong>© 2024 Hotel Tranquility Base Hotel + Casino. Todos os direitos reservados.</strong><br> Desenvolvido por Fabio Henrique.</p>
+    </footer>
 </body>
-    <!-- <script src="script/index.js"></script> -->
+<script src="script/index.js"></script>
+
 </html>

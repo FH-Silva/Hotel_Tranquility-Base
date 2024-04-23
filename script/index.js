@@ -8,7 +8,7 @@ formEvinado.addEventListener("submit", function (event){
     
     if (pass == "2678"){
         alert("Bem-vindo ao " + hotel + ", "  + name + ". É um imenso prazer ter você por aqui!");
-        window.location.href = "index.html";
+        window.location.href = "pagPrinc.html";
          
         // let escolha = prompt("1. 2. 3. 4.");
         // switch(escolha){
