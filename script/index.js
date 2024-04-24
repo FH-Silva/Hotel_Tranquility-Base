@@ -2,14 +2,26 @@ const hotel = "Tranquility Base Hotel & Casino"
 
 var formEvinado = document.getElementById("enviar");
 formEvinado.addEventListener("submit", function (event){
-    event.preventDefault(); //Evita o carreagamento padrao
     var name = document.getElementById("name").value;
     var pass = document.getElementById("pass").value;
-    
+
     if (pass == "2678"){
-        alert("Bem-vindo ao " + hotel + ", "  + name + ". É um imenso prazer ter você por aqui!");
+        event.preventDefault();
         window.location.href = "pagPrinc.html";
-         
+
+        document.getElementById("hotelName").innerText = hotel;
+        document.getElementById("userName").innerText = name;
+
+
+    }else{
+        alert("Senha incorreta");
+    }
+});
+
+
+
+
+
         // let escolha = prompt("1. 2. 3. 4.");
         // switch(escolha){
         //     case "1":
@@ -28,7 +40,3 @@ formEvinado.addEventListener("submit", function (event){
         //         alert("Nenhuma das opções escolhida.");
         //         break
         // }
-    }else{
-        alert("Senha incorreta");
-    }
-});
