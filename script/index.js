@@ -5,14 +5,12 @@ formEvinado.addEventListener("submit", function (event){
     var name = document.getElementById("name").value;
     var pass = document.getElementById("pass").value;
 
-    if (pass == "2678"){
+    if (pass == 2678){
         event.preventDefault();
         window.location.href = "pagPrinc.html";
 
         document.getElementById("hotelName").innerText = hotel;
         document.getElementById("userName").innerText = name;
-
-
     }else{
         alert("Senha incorreta");
     }
