@@ -7,11 +7,11 @@
     --azulEscuro: #0F3057;
     --azulClaro: #3d7fca;
     --cinzaClaro: #969798;
-    --verde: #78B350;
 }
 
 body{
-    background-color: #56769b;
+    background-color: var(--cinzaClaro);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1{

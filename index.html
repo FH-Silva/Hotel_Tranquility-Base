@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabio Henrique">
@@ -28,14 +27,24 @@
             <div class="button"><input type="submit" name="login" id="login" value="Logar"></div>
         </form>
     </main>
-
-    <!-- <footer>
-        <dl>
-            <dt><strong>Endereço:</strong></dt>
-            <dd>Rua Tranquility Base, Bairro Lua, Estado Sistema Solar</dd>
-        </dl>
-        <P><strong>© 2024 Hotel Tranquility Base Hotel + Casino. Todos os direitos reservados.</strong><br> Desenvolvido por Fabio Henrique.</p>
-    </footer> -->
 </body>
-<script src="script/index.js"></script>
+
+<script>
+    //Processo basico de autenticação
+    const hotel = "Tranquility Base Hotel & Casino"
+
+    var formEvinado = document.getElementById("enviar");
+    formEvinado.addEventListener("submit", function (event) {
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pass").value;
+
+        if (pass == 2678) {
+            event.preventDefault();
+            alert(`Bem-vindo ao ${hotel}, ${name}. É um imenso prazer ter você por aqui!`);
+            window.location.href = "pagPrinc.html";
+        } else {
+            alert("Senha incorreta");
+        }
+    });
+</script>
 </html>

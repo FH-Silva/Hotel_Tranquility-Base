@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabio Henrique">
     <meta name="revised" content="Saturday, April 6th, 2024, 5:15 am">
     <meta name="language" content="Portuguese">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/pagPrinc.css">
 
     <title>Tranquility Base Hotel & Casino</title>
-</head> 
-<body>
-    <h1>Bem-vindo ao <span id="hotelName"></span>, <span id="userName"></span>. É um imenso prazer ter você por aqui!</h1>
+</head>
 
-    <div id="opcoes">
-        <button>Reservar Quartos</button>
-        <button>Cadastros de Hospedes</button> <br>
-        <button>Cadastros de Hospedes 2</button>
-        <button>Eventos</button> <br>
-        <button>Abastecimento do carro</button>
-        <button>Ar condicionado</button> <br>
-        <button>Sair</button>
+<body>
+    <h1>Escolha uma das opções</h1>
+
+    <div class="d-grid gap-2 col-7 mx-auto" id="opcoes">
+        <button class="btn btn-primary" type="button" id="botao1">Reservar Quartos</button>
+
+        <!--Abreviações: inp (Input) + A (Reservar Quartos) + Objetivo do Input (Nome, por ex.)-->
+            <form class="entrada" id="form1">
+                <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpANome" id="inpANome" required>
+                <input class="caixa" type="number" placeholder="Valor da diária" name="inpAValor" id="inpAValor" required> <br>
+                <input class="caixa" type="number" placeholder="Dias de Hospedagem" name="inpADiaria" id="inpADiaria" required>
+                <input class="caixa" type="number" placeholder="Quarto do Hospede" name="inpAQuarto" id="inpAQuarto" required> <br>
+                <input class="caixa" type="text" placeholder="Valor da reserva" readonly> <br>
+                <input class="botao" type="submit" name="inpAEnviar" id="inpAEnviar" value="Enviar">
+            </form>
+
+        <button class="btn" type="button" id="botao2">Cadastros de Hospedes</button>
+        <button class="btn" type="button" id="botao3">Cadastros de Hospedes 2</button>
+        <button class="btn" type="button" id="botao4">Eventos</button>
+        <button class="btn" type="button" id="botao5">Abastecer Carro</button>
+        <button class="btn" type="button" id="botao6">Ar condicionado</button>
+        <button class="btn" type="button" id="botao7">Sair</button>
     </div>
 </body>
-    <script src="script/index.js"></script>
+<script src="script/pagPrinc.js"></script>
+
 </html>

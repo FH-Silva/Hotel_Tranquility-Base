@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="mostrarFormulario">Mostrar Formulário</button>
+    <form id="meuFormulario" style="display: none;">
+        <!-- Seus campos de formulário aqui -->
+        <input type="text" id="nome" name="nome">
+        <input type="email" id="email" name="email">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        // Selecionando o botão e o formulário
+        const botaoMostrarFormulario = document.getElementById('mostrarFormulario');
+        const formulario = document.getElementById('meuFormulario');
+
+        // Adicionando um ouvinte de evento de clique ao botão
+        botaoMostrarFormulario.addEventListener('click', function () {
+            // Alterando a propriedade de exibição do formulário para "block"
+            formulario.style.display = 'block';
+        });
+
+    </script>
+</body>
+
+</html>
