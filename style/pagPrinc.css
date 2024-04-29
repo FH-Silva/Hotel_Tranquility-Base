@@ -64,6 +64,9 @@ h1 {
     border-radius: 5px;
     font-size: 20px;
   }
+  #saida1{
+    user-select: none;
+  }
   .botao{
     color: white;
     background-color: var(--azulClaro);
