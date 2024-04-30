@@ -1,6 +1,6 @@
 //Fazendo a "conexão" com os botões do HTML
-var botao1 = document.getElementById("botao1");
-var botao2 = document.getElementById("botao2");
+var reservarQuartos = document.getElementById("botao1");
+var cadastroHospedes = document.getElementById("botao2");
 var botao3 = document.getElementById("botao3");
 var botao4 = document.getElementById("botao4");
 var botao5 = document.getElementById("botao5");
@@ -13,32 +13,8 @@ let form4 = document.getElementById("form4");
 let form5 = document.getElementById("form5");
 let form6 = document.getElementById("form6");
 
-function reservarQuartos(event) {
-    event.preventDefault()
-    console.log("Função reservarQuartos chamada");
-    let inpANome = document.getElementById("inpANome").value;
-    let inpAValor = Number(document.getElementById("inpAValor").value);
-    let inpADiaria = Number(document.getElementById("inpADiaria").value);
-    let inpAQuarto = Number(document.getElementById("inpAQuarto").value);
-
-    //Validar valores
-    if (inpAValor > 0 && inpADiaria > 0 && inpADiaria < 31 && inpAQuarto > 0 && inpAQuarto < 21) {
-        let result = inpAValor * inpADiaria;
-        document.getElementById("saida1").value = "Resultado: R$" + result;
-    } else {
-        document.getElementById("saida1").value = "Valores Inválidos";
-    }
-}
-
-function cadastroHospedes(event) {
-    event.preventDefault();
-    // let inpBValor = Number(document.getElementById("inpBValor").value);
-    // let inpBNome = document.getElementById("inpBNome").value;
-    // let inpBIdade = Number(document.getElementById("inpBIdade").value);
-}
-
-//Reservar Quartos
-botao1.addEventListener("click", function () {
+//Quando clicar em "Reservar Quartos", abre o form e oculta os outros formulários
+reservarQuartos.addEventListener("click", function () {
     form1.style.display = "block";
     form2.style.display = "none";
     form3.style.display = "none";
@@ -46,9 +22,26 @@ botao1.addEventListener("click", function () {
     form5.style.display = "none";
     form6.style.display = "none";
 
-    form1.addEventListener("submit", reservarQuartos);
+    //Quando clicar enviar os valores, a função é executada
+    form1.addEventListener("submit", function(event){
+        event.preventDefault()
+        let inpANome = document.getElementById("inpANome").value;
+        let inpAValor = Number(document.getElementById("inpAValor").value);
+        let inpADiaria = Number(document.getElementById("inpADiaria").value);
+        let inpAQuarto = Number(document.getElementById("inpAQuarto").value);
+    
+        //Validar valores
+        if (inpAValor > 0 && inpADiaria > 0 && inpADiaria < 31 && inpAQuarto > 0 && inpAQuarto < 21) {
+            let result = inpAValor * inpADiaria;
+            document.getElementById("saida1").value = "Resultado: R$" + result;
+        } else {
+            document.getElementById("saida1").value = "Valores Inválidos";
+        }
+    });
 });
-botao2.addEventListener("click", function () {
+
+//Quando clicar em "Cadastro de Hospedes", abre o form e oculta os outros formulários
+cadastroHospedes.addEventListener("click", function () {
     form1.style.display = "none";
     form2.style.display = "block";
     form3.style.display = "none";
@@ -56,11 +49,32 @@ botao2.addEventListener("click", function () {
     form5.style.display = "none";
     form6.style.display = "none";
 
-    form2.addEventListener("submit", cadastroHospedes);
-    document.getElementById("inpBFinaliza").addEventListener("submit", function(){
-        alert("OK")
-    })
+    //Arrays para armazenar os valores que serão inseridos
+    var gratis = [];
+    var meia = [];
+    var inteira = [];
+
+    form2.addEventListener("submit", function(event){
+            event.preventDefault();
+        
+            let inpBValor = Number(document.getElementById("inpBValor").value);
+            let inpBNome = document.getElementById("inpBNome").value;
+            let inpBIdade = Number(document.getElementById("inpBIdade").value);
+        
+            //Verifica os valores inseridos
+            if (inpBIdade <= 6) {
+                gratis.push(inpBIdade);
+            } else if (inpBIdade >= 60) {
+                meia.push(inpBIdade);
+            } else {
+                inteira.push(inpBIdade);
+            }
+            document.getElementById("saida2").value = "Grátis: " + gratis.length + ", Meia: " + meia.length + ", Inteira: " + inteira.length;
+        })
 });
+
+
+
 botao3.addEventListener("click", function () {
     form1.style.display = "none";
     form2.style.display = "none";
