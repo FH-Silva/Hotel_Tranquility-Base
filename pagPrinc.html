@@ -18,23 +18,46 @@
 
     <div class="d-grid gap-2 col-7 mx-auto" id="opcoes">
         <button class="btn btn-primary" type="button" id="botao1">Reservar Quartos</button>
-
-        <!--Abreviações: inp (Input) + A (Reservar Quartos) + Objetivo do Input (Nome, por ex.)-->
+        <!--Abreviações: inp (Input) + A (A = primeira opção; B = Segunda opção; e etc) + Objetivo do Input (Nome, Valor da diaria, etc) = inpANome-->
             <form class="entrada" id="form1">
                 <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpANome" id="inpANome" required>
                 <input class="caixa" type="number" placeholder="Valor da diária" name="inpAValor" id="inpAValor" required> <br>
                 <input class="caixa" type="number" placeholder="Dias de Hospedagem" name="inpADiaria" id="inpADiaria" required>
                 <input class="caixa" type="number" placeholder="Quarto do Hospede" name="inpAQuarto" id="inpAQuarto" required> <br>
                 <input class="caixa" id="saida1" type="text" placeholder="Valor da Hospedagem" readonly> <br>
-                <input class="botao" type="submit" name="inpAEnviar" id="inpAEnviar" value="Enviar">
+                <input class="botao" type="submit" value="Enviar"> <br>
             </form>
 
-        <button class="btn" type="button" id="botao2">Cadastros de Hospedes</button>
+        <button class="btn" type="button" id="botao2">Cadastro de Hospedes</button>
+            <form class="entrada" id="form2">
+                <input class="caixa" type="number" placeholder="Valor da diária padrão" name="inpBValor" id="inpBValor" required value="100"> <br>
+                <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpBNome" id="inpBNome" required value="Name"> <br>
+                <input class="caixa" type="number" placeholder="Idade" name="inpBIdade" id="inpBIdade" required value="18"> <br>
+                <input class="botao" id="inpBEnviar" type="submit" value="Cadastrar">
+                <input class="botao" id="inpBFinaliza" type="submit" value="Finalizar Processo">
+            </form>
+
         <button class="btn" type="button" id="botao3">Cadastros de Hospedes 2</button>
+            <form class="entrada" id="form3">
+                <input type="button" value="Desenvolvendo">
+            </form>
+
         <button class="btn" type="button" id="botao4">Eventos</button>
+        <form class="entrada" id="form4">
+            <input type="button" value="Desenvolvendo">
+        </form>
+
         <button class="btn" type="button" id="botao5">Abastecer Carro</button>
+        <form class="entrada" id="form5">
+            <input type="button" value="Desenvolvendo">
+        </form>
+
         <button class="btn" type="button" id="botao6">Ar condicionado</button>
-        <button class="btn" type="button" id="botao7">Sair</button>
+        <form class="entrada" id="form6">
+            <input type="button" value="Desenvolvendo">
+        </form>
+
+        <button class="btn" type="button" id="botao7">Sair</button> 
     </div>
 </body>
 <script src="script/pagPrinc.js"></script>
