@@ -75,7 +75,7 @@ cadastroHospedes.addEventListener("click", function () {
         } else {
             inteira.push(inpBIdade);
         }
-        cadastrados.push(inpBNome);
+        cadastrados.push(inpBNome); 
 
         let result = inpBValor * (inteira.length + meia.length / 2);
         document.getElementById("saida3").value = `Inteira: ${inteira.length}, Meia: ${meia.length}, Grátis: ${gratis.length}`;
