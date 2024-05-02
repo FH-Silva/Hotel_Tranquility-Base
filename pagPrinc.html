@@ -31,16 +31,19 @@
 
         <button class="btn" type="button" id="botao2">Cadastro de Hospedes</button>
             <form class="entrada" id="form2">
-                <input class="caixa" type="number" placeholder="Valor da diária padrão" name="inpBValor" id="inpBValor" required value="100"> <br>
-                <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpBNome" id="inpBNome" required value="Name"> <br>
-                <input class="caixa" type="number" placeholder="Idade" name="inpBIdade" id="inpBIdade" required value="18"> <br>
-                <input class="caixa" id="saida2" type="text" placeholder="Resultado" readonly> <br>
+                <input class="caixa" type="number" placeholder="Valor da diária padrão" name="inpBValor" id="inpBValor" required> <br>
+                <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpBNome" id="inpBNome" required> <br>
+                <input class="caixa" type="number" placeholder="Idade" name="inpBIdade" id="inpBIdade" required> <br>
+                <input class="caixa" id="saida2" type="text" placeholder="Valor a Pagar" readonly>
+                <input class="caixa" id="saida3" type="text" placeholder="Hospedes Registrados" readonly> <br>
                 <input class="botao" type="submit" value="Cadastrar">
             </form>
 
-        <button class="btn" type="button" id="botao3">Cadastros de Hospedes 2</button>
+        <button class="btn" type="button" id="botao3">Busca de Hospedes</button>
             <form class="entrada" id="form3">
-                <input type="button" value="Desenvolvendo">
+                <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpCNome" id="inpCNome" required> <br>
+                <input class="botao" type="submit" value="Buscar">
+                <input class="botao" id="lista" type="button" value="Listar Hospedes">
             </form>
 
         <button class="btn" type="button" id="botao4">Eventos</button>
