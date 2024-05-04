@@ -15,18 +15,18 @@
 </head>
 
 <body>
-    <h1>Escolha uma das opções</h1>
+    <h1>Tranquility Base Hotel & Casino</h1>
 
-    <div class="d-grid gap-2 col-7 mx-auto" id="opcoes">
-        <button class="btn btn-primary" type="button" id="botao1">Reservar Quartos</button>
-        <!--Abreviações: inp (Input) + A (A = primeira opção; B = Segunda opção; e etc) + Objetivo do Input (Nome, Valor da diaria, etc) = inpANome-->
+    <div class="d-grid gap-2" id="opcoes">
+        <!--Abreviações: inp (Input) + A (A = primeiro bloco; B = Segundo bloco; e etc) + Descrição do Input (Nome, Valor da diaria, etc) = inpANome-->
+        <button class="btn" type="button" id="botao1">Reservar Quartos</button>
             <form class="entrada" id="form1">
                 <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpANome" id="inpANome" required>
-                <input class="caixa" type="number" placeholder="Valor da diária" name="inpAValor" id="inpAValor" required> <br>
-                <input class="caixa" type="number" placeholder="Dias de Hospedagem" name="inpADiaria" id="inpADiaria" required>
-                <input class="caixa" type="number" placeholder="Quarto do Hospede" name="inpAQuarto" id="inpAQuarto" required> <br>
+                <input class="caixa" type="number" placeholder="Valor da diária" name="inpAValor" id="inpAValor" min="0" required> <br>
+                <input class="caixa" type="number" placeholder="Dias de Hospedagem" name="inpADiaria" id="inpADiaria" min="0" max="31" required>
+                <input class="caixa" type="number" placeholder="Quarto do Hospede" name="inpAQuarto" id="inpAQuarto" min="0" max="20" required> <br>
                 <input class="caixa" id="saida1" type="text" placeholder="Valor da Hospedagem" readonly> <br>
-                <input class="botao" type="submit" value="Enviar"> <br>
+                <input class="botao" type="submit" value="Reservar"> <br>
             </form>
 
         <button class="btn" type="button" id="botao2">Cadastro de Hospedes</button>
@@ -42,23 +42,56 @@
         <button class="btn" type="button" id="botao3">Busca de Hospedes</button>
             <form class="entrada" id="form3">
                 <input class="caixa" type="text" placeholder="Nome do Hospede" name="inpCNome" id="inpCNome" required> <br>
+                <input class="caixa" id="saida14" type="text" placeholder="Hospedes Registrados" readonly> <br>
                 <input class="botao" type="submit" value="Buscar">
                 <input class="botao" id="lista" type="button" value="Listar Hospedes">
             </form>
 
         <button class="btn" type="button" id="botao4">Eventos</button>
         <form class="entrada" id="form4">
-            <input type="button" value="Desenvolvendo">
+            <input class="caixa" type="text" placeholder="Nome da Empresa" name="inpDNome" id="inpDNome" required> <br>
+            <input class="caixa" type="number" placeholder="Quantidade de Hospedes" name="inpDQuantHosp" id="inpDQuantHosp" min="1" max="350" required>
+            <select class="caixa" name="inpDSemana" id="inpDSemana">
+                    <option value="segunda">Segunda</option>
+                    <option value="terca">Terça</option>
+                    <option value="quarta">Quarta</option>
+                    <option value="quinta">Quinta</option>
+                    <option value="sexta">Sexta</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+            </select> <br>
+            <input class="caixa" type="number" placeholder="Hora de inicio (h)" name="inpDHora" id="inpDHora" min="7" max="23" required>
+            <input class="caixa" type="number" placeholder="Tempo de Duração (h)" name="inpDDuracao" id="inpDDuracao" required>
+            <input class="botao" type="submit" value="Alugar"> <br>
+            <input class="caixa" id="saida4" type="text" placeholder="Autitório" readonly>
+            <input class="caixa" id="saida5" type="text" placeholder="Dia e hora do evento" readonly>
+            <input class="caixa" id="saida6" type="text" placeholder="Garçons" readonly>
+            <input class="caixa" id="saida7" type="text" placeholder="Café" readonly>
+            <input class="caixa" id="saida8" type="text" placeholder="Água" readonly>
+            <input class="caixa" id="saida9" type="text" placeholder="Salgados" readonly>
         </form>
 
         <button class="btn" type="button" id="botao5">Abastecer Carro</button>
         <form class="entrada" id="form5">
-            <input type="button" value="Desenvolvendo">
+            <input class="caixa" type="number" placeholder="Álcool do Posto Wayne Oil" name="inpEAlcool1" id="inpEAlcool1" min="0" required>
+            <input class="caixa" type="number" placeholder="Gasolina do Posto Wayne Oil" name="inpEGasolina1" id="inpEGasolina1" min="0" required> <br>
+            <input class="caixa" type="number" placeholder="Álcool do Posto Stark Oil" name="inpEAlcool2" id="inpEAlcool2" min="0" required>
+            <input class="caixa" type="number" placeholder="Gasolina do Posto Stark Oil" name="inpEGasolina2" id="inpEGasolina2" min="0" required> <br>
+            <input class="botao" type="submit" value="Verificar"> <br>
+            <input class="caixa" id="saida10" type="text" placeholder="Posto mais barato" readonly>
         </form>
 
         <button class="btn" type="button" id="botao6">Ar condicionado</button>
         <form class="entrada" id="form6">
-            <input type="button" value="Desenvolvendo">
+            <input class="caixa" type="text" placeholder="Nome da Empresa" name="inpFNome" id="inpFNome" required> <br>
+            <input class="caixa" type="number" placeholder="Valor do serviço" name="inpFValor" id="inpFValor" required>
+            <input class="caixa" type="number" placeholder="Quantidade de aparelhos" name="inpFQtd" id="inpFQtd" required> <br>
+            <input class="caixa" type="number" placeholder="Desconto (%)" name="inpFDescont" id="inpFDescont" required>
+            <input class="caixa" type="number" placeholder="Qtd mínima para o desconto" name="inpFQtdDescont" id="inpFQtdDescont" required> <br>
+            <input class="botao" type="submit" value="Calcular"> <br>
+            <input class="caixa" id="saida11" type="text" placeholder="Prestadora do serviço" readonly> <br>
+            <input class="caixa" id="saida12" type="text" placeholder="Valor Total" readonly> <br>
+            <input class="caixa" id="saida13" type="text" placeholder="Desconto" readonly>
         </form>
 
         <button class="btn" type="button" id="botao7">Sair</button> 
