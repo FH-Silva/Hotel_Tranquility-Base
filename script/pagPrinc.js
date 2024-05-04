@@ -167,9 +167,9 @@ eventos.addEventListener("click", function () {
         let valorAgua = agua * 0.5;
         let valorSalgado = cafe * 0.34;
 
-        document.getElementById("saida7").value = `Café: ${cafe}litros, R$ ${(valorCafe).toFixed(2)}`;
-        document.getElementById("saida8").value = `Água: ${agua}litros, R$ ${(valorAgua).toFixed(2)}`;
-        document.getElementById("saida9").value = `Salgados: ${salgados}, R$ ${(valorSalgado).toFixed(2)}`;
+        document.getElementById("saida7").value = `Café: ${(cafe.toFixed(2))}litros, R$ ${(valorCafe).toFixed(2)}`;
+        document.getElementById("saida8").value = `Água: ${(agua.toFixed(2))}litros, R$ ${(valorAgua).toFixed(2)}`;
+        document.getElementById("saida9").value = `Salgados: ${(salgados).toFixed(2)}, R$ ${(valorSalgado).toFixed(2)}`;
 
         //Confirma o evento ou não?
         let confirmacao = confirm(`Confirmar evento para ${empresa}, ${semana}, às ${hora}h? \nCusto do Buffet: R$ ${(valorCafe + valorAgua + valorSalgado).toFixed(2)} \nCusto dos Garçons: R$ ${qtdGarcons * 10.5}`);
